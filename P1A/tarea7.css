@@ -1,0 +1,17 @@
+.row {
+    width: 100%;
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.brick {
+    width: 100%;
+  background-color: #888;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  flex: 1;
+  margin-right: 2px;
+}

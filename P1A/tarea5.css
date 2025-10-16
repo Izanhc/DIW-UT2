@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0 0 16px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #f8f8f8;
+    border: 2px solid #000000;
+    width: 340px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.card img {
+    width: 120px;
+    height: 100%;
+    object-fit: cover;
+    border-right: 2px solid #000000;
+    border-bottom: none;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 0px 0px;
+}
+
+.card-title {
+    font-weight: bold;
+    background: #ddd;
+    width: 100%;
+    text-align: center;
+    padding: 6px 0;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 2px;
+}
+
+.card-text {
+    padding: 0;
+    font-size: 0.95em;
+    text-align: justify;
+}

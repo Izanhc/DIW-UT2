@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: left;
+  color: #ffffff;
+  padding: 35px;
+  background-color: #333333;
+}
+.container{
+  width: 100%;
+  background-color: #cccccc;
+}
+/* Márgenes laterales específicos para la página 01 */
+.page-01 .container {
+  /* padding lateral para crear espacio a izquierda y derecha */
+  padding-left: 10%;
+  padding-right: 10%;
+  /* limitar el ancho del contenido y centrarlo en pantallas grandes */
+  max-width: 100%;
+  
+}
+/* Fondo para que los huecos laterales no queden en blanco en la página 01 */
+.page-01 {
+  background-color: #f4f6f8; /* gris muy claro */
+  min-height: 100vh; /* cubrir toda la altura de la ventana */
+}
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #cccccc;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: #020202;
+  font-weight: 600;
+  padding: 8px 12px;
+  border: #ffffff 1px solid;
+}
+
