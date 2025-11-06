@@ -10,86 +10,75 @@
   --font-heading: 'Reckless Neue', serif;
   --font-body: 'Neue Montreal', 'Inter', sans-serif;
 }
+
+/* -------------------- */
+/* Fuentes */
+/* -------------------- */
 @font-face {
   font-family: 'Neue Montreal';
   src: url('assets/fonts/NeueMontreal-Regular.woff2') format('woff2'),
-     url('assets/fonts/NeueMontreal-Regular.woff') format('woff');
+       url('assets/fonts/NeueMontreal-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Neue Montreal';
   src: url('assets/fonts/NeueMontreal-Medium.woff2') format('woff2'),
-     url('assets/fonts/NeueMontreal-Medium.woff') format('woff');
+       url('assets/fonts/NeueMontreal-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Neue Montreal';
   src: url('assets/fonts/NeueMontreal-MediumItalic.woff2') format('woff2'),
-     url('assets/fonts/NeueMontreal-MediumItalic.woff') format('woff');
+       url('assets/fonts/NeueMontreal-MediumItalic.woff') format('woff');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Reckless Neue';
   src: url('assets/fonts/RecklessNeue-Regular.woff2') format('woff2'),
-     url('assets/fonts/RecklessNeue-Regular.woff') format('woff');
+       url('assets/fonts/RecklessNeue-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Reckless Neue';
   src: url('assets/fonts/RecklessNeue-Medium.woff2') format('woff2'),
-     url('assets/fonts/RecklessNeue-Medium.woff') format('woff');
+       url('assets/fonts/RecklessNeue-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
+/* -------------------- */
+/* Reset + Base */
+/* -------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: var(--font-body);
   background-color: var(--color-background-light);
   color: var(--color-text-dark);
   overflow-x: hidden;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
+html { scroll-behavior: smooth; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
 .container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-section {
-  padding: 80px 0;
-}
+section { padding: 80px 0; }
 
 .btn {
   display: inline-block;
@@ -101,50 +90,38 @@ section {
   letter-spacing: 0.98px;
   text-align: center;
   transition: background-color 0.3s ease;
-  text-transform: uppercase; /* Añadido para consistencia */
+  text-transform: uppercase;
 }
-
 .btn-primary {
   background-color: var(--color-primary-accent);
   color: var(--color-text-dark);
 }
-
 .btn-primary:hover {
-  background-color: #d1b07f; /* Ligeramente más oscuro al pasar el ratón */
+  background-color: #d1b07f;
 }
-
 .btn-secondary {
   background-color: var(--color-secondary-accent);
   color: var(--color-primary-light);
 }
-
 .btn-secondary:hover {
-  background-color: #a84b1d; /* Ligeramente más oscuro al pasar el ratón */
+  background-color: #a84b1d;
 }
-
 .section-title-bar {
   display: block;
   width: 64px;
   height: 8px;
-  background-color: #126f8d; /* Color original del código */
+  background-color: #126f8d;
   margin-bottom: 24px;
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 60px 0;
-  }
-}
-
-/* -------------------------------------- */
-/* 1. Hero Section (Header & Banner) */
-/* -------------------------------------- */
+/* -------------------- */
+/* Hero Section */
+/* -------------------- */
 .hero-section {
   position: relative;
   min-height: 800px;
   padding: 0;
-  /* Reemplazo de la ruta dinámica por una relativa */
-  background-image: linear-gradient(rgba(17, 18, 20, 0.7), rgba(17, 18, 20, 0.7)), url('assets/img/header-background.jpg'); 
+  background-image: linear-gradient(rgba(17, 18, 20, 0.7), rgba(17, 18, 20, 0.7)), url('assets/img/header-background.jpg');
   background-size: cover;
   background-position: center;
   color: var(--color-primary-light);
@@ -152,7 +129,6 @@ section {
   flex-direction: column;
   justify-content: center;
 }
-
 .site-header {
   position: absolute;
   top: 0;
@@ -160,28 +136,18 @@ section {
   width: 100%;
   z-index: 100;
 }
-
 .header-top-bar {
   background-color: var(--color-primary-dark);
   padding: 8px 0;
   font-size: 14px;
 }
-
 .header-top-bar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.header-email, .header-phone {
-  color: #efe4cd;
-}
-
-.header-top-right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
+.header-email, .header-phone { color: #efe4cd; }
+.header-top-right { display: flex; align-items: center; gap: 24px; }
 
 .lang-switcher {
   display: flex;
@@ -189,12 +155,8 @@ section {
   gap: 8px;
   color: var(--color-primary-light);
 }
-.lang-switcher a {
-  font-weight: 500;
-}
-.lang-switcher a.active {
-  font-weight: 700;
-}
+.lang-switcher a { font-weight: 500; }
+.lang-switcher a.active { font-weight: 700; }
 .lang-switcher .separator {
   width: 1px;
   height: 12px;
@@ -207,29 +169,23 @@ section {
   align-items: center;
   padding: 20px 0;
 }
-
-.logo img {
-  height: 54px;
-  width: auto;
-}
-
+.logo img { height: 54px; width: auto; }
 .nav-links {
   display: flex;
   gap: 40px;
-  font-family: 'Neue Montreal', sans-serif; /* Cambiado a Neue Montreal para usar la fuente cargada */
-  font-weight: 500; /* Ajustado para Neue Montreal-Medium */
+  font-family: 'Neue Montreal', sans-serif;
+  font-weight: 500;
   font-size: 16px;
 }
 
 .hero-content {
-  padding-top: 150px; /* space for header */
-  padding-bottom: 80px; /* Añadido espacio inferior */
+  padding-top: 150px;
+  padding-bottom: 80px;
   max-width: 620px;
-  margin: 0; /* Aligned to left */
+  margin: 0;
   position: relative;
-  z-index: 2; /* Para asegurar que el contenido esté sobre el fondo */
+  z-index: 2;
 }
-
 .hero-subtitle {
   font-family: 'Neue Montreal', sans-serif;
   font-size: 18px;
@@ -240,7 +196,6 @@ section {
   font-style: italic;
   font-weight: 500;
 }
-
 .hero-title {
   font-family: var(--font-heading);
   font-size: 55px;
@@ -248,19 +203,18 @@ section {
   line-height: 1.2;
   margin-bottom: 22px;
 }
-
 .hero-description {
   font-size: 18px;
   line-height: 1.5;
   max-width: 483px;
   margin-bottom: 30px;
 }
-
 .hero-buttons {
   display: flex;
   gap: 20px;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .hero-content {
     margin: 0 auto;
@@ -269,41 +223,28 @@ section {
   }
 }
 
+/* Móvil */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Simple hide for mobile, would need a burger menu */
-  }
-  .main-nav {
-    justify-content: center;
-  }
-  .header-top-bar-container {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .hero-title {
-    font-size: 40px;
-  }
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
+  .nav-links { display: none; }
+  .main-nav { justify-content: center; }
+  .header-top-bar-container { flex-direction: column; gap: 8px; }
+  .hero-title { font-size: 40px; }
+  .hero-description { font-size: 16px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
 }
 
-
-/* -------------------------------------- */
-/* 2. About Section */
-/* -------------------------------------- */
+/* -------------------- */
+/* About Section */
+/* -------------------- */
 .about-container {
   display: flex;
   align-items: center;
   gap: 128px;
 }
-
 .about-text {
   flex: 1;
   max-width: 485px;
 }
-
 .about-title {
   font-family: var(--font-heading);
   font-size: 36px;
@@ -311,76 +252,55 @@ section {
   line-height: 1.2;
   margin-bottom: 24px;
 }
-
 .about-description {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 40px;
 }
-/* Estilo para el texto en <em> dentro de la descripción */
-.about-description em {
-    font-style: italic;
-    font-weight: 500; /* Se carga NeueMontreal-MediumItalic.woff */
-}
-
+.about-description em { font-style: italic; font-weight: 500; }
 .about-image {
   flex: 1;
   max-width: 608px;
 }
-
 .about-image img {
   width: 100%;
   height: auto;
   border-radius: 31px;
 }
 
+/* Tablet y móvil */
 @media (max-width: 1024px) {
-  .about-container {
-    flex-direction: column;
-    gap: 40px;
-    text-align: center;
-  }
-  .about-text {
-    max-width: 100%;
-  }
-  .section-title-bar {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .about-container { flex-direction: column; gap: 40px; text-align: center; }
+  .about-text { max-width: 100%; }
+  .section-title-bar { margin-left: auto; margin-right: auto; }
+  .about-title { font-size: 30px; }
+  .about-description { font-size: 16px; }
 }
 
-
-/* -------------------------------------- */
-/* 3. Banner Trilingüe */
-/* -------------------------------------- */
+/* -------------------- */
+/* Banner */
+/* -------------------- */
 .banner-section {
   position: relative;
   padding: 120px 0;
-  /* Reemplazo de la ruta dinámica por una relativa */
   background-image: url('assets/img/banner-trilingual-background.png');
   background-size: cover;
   background-position: center;
   text-align: center;
   color: var(--color-text-light);
 }
-
 .banner-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-color: rgba(17, 44, 80, 0.7);
 }
-
 .banner-content {
   position: relative;
   z-index: 1;
   max-width: 740px;
-  margin: 0 auto; /* Centrado */
+  margin: 0 auto;
 }
-
 .banner-title {
   font-family: var(--font-heading);
   font-size: 52px;
@@ -388,7 +308,6 @@ section {
   line-height: 1.2;
   margin-bottom: 24px;
 }
-
 .banner-description {
   font-size: 20px;
   line-height: 1.5;
@@ -396,30 +315,24 @@ section {
   margin: 0 auto 40px;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
-  .banner-title {
-    font-size: 36px;
-  }
-  .banner-description {
-    font-size: 18px;
-  }
+  .banner-title { font-size: 36px; }
+  .banner-description { font-size: 18px; }
 }
 
-
-/* -------------------------------------- */
-/* 4. Team Section */
-/* -------------------------------------- */
+/* -------------------- */
+/* Team Section */
+/* -------------------- */
 .team-container {
   display: flex;
   gap: 27px;
   align-items: flex-start;
 }
-
 .team-intro {
   flex-basis: 350px;
   flex-shrink: 0;
 }
-
 .team-intro-title {
   font-family: var(--font-heading);
   font-size: 36px;
@@ -427,16 +340,14 @@ section {
   line-height: 1.2;
   margin-bottom: 30px;
 }
-
 .team-members-wrapper {
   flex-grow: 1;
   background-color: var(--color-background-medium);
   border-radius: 25px;
   padding: 40px;
 }
-
 .team-members-subtitle {
-  font-family: 'Neue Montreal', sans-serif; /* Cambiado a Neue Montreal */
+  font-family: 'Neue Montreal', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
@@ -444,77 +355,51 @@ section {
 }
 .team-members-subtitle em {
   font-style: italic;
-  font-weight: 500; /* Se carga NeueMontreal-MediumItalic.woff */
+  font-weight: 500;
 }
-
 .team-members-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 84px;
 }
-
 .member-card img {
   width: 100%;
   height: 306px;
   object-fit: cover;
   margin-bottom: 8px;
 }
-
 .member-name {
   font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 12px;
 }
-
 .member-bio {
   font-size: 16px;
   line-height: 1.25;
 }
-
 @media (max-width: 1200px) {
-  .team-members-grid {
-    gap: 30px;
-  }
+  .team-members-grid { gap: 30px; }
 }
-
 @media (max-width: 1024px) {
-  .team-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .team-intro {
-    flex-basis: auto;
-    text-align: center;
-  }
-  .section-title-bar {
-    margin: 0 auto 24px;
-  }
+  .team-container { flex-direction: column; align-items: stretch; }
+  .team-intro { flex-basis: auto; text-align: center; }
+  .section-title-bar { margin: 0 auto 24px; }
+  .team-members-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
 }
-
 @media (max-width: 768px) {
-  .team-members-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .team-members-wrapper {
-    padding: 20px;
-  }
+  .team-members-grid { grid-template-columns: 1fr; gap: 40px; }
+  .team-members-wrapper { padding: 20px; }
 }
 
-
-/* -------------------------------------- */
-/* 5. Testimonials Section */
-/* -------------------------------------- */
+/* -------------------- */
+/* Testimonials */
+/* -------------------- */
 .testimonials-section {
   background-color: var(--color-primary-dark);
   color: var(--color-text-dark);
 }
-
-.testimonials-header {
-  margin-bottom: 40px;
-}
-
+.testimonials-header { margin-bottom: 40px; }
 .testimonials-title {
   font-family: var(--font-heading);
   font-size: 36px;
@@ -523,81 +408,43 @@ section {
   color: var(--color-primary-light);
   max-width: 464px;
 }
-
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 50px;
 }
-
 .testimonial-card {
   padding: 30px;
   line-height: 1.56;
   font-size: 16px;
-  border-radius: 10px; /* Añadido un poco de radio para que se vea mejor */
+  border-radius: 10px;
 }
+.testimonial-card p:first-child { margin-bottom: 20px; }
+.testimonial-card .author { font-weight: 500; }
+.testimonial-card.card-1,
+.testimonial-card.card-2 { background-color: var(--color-background-light); }
+.testimonial-card.card-3 { background-color: #f5f5f5; }
 
-.testimonial-card p:first-child {
-  margin-bottom: 20px;
-}
-
-.testimonial-card .author {
-  font-weight: 500;
-}
-
-.testimonial-card.card-1 {
-  background-color: var(--color-background-light);
-}
-.testimonial-card.card-2 {
-  background-color: var(--color-background-light);
-}
-.testimonial-card.card-3 {
-  background-color: #f5f5f5;
-}
-
-@media (max-width: 1200px) {
-  .testimonials-grid {
-    gap: 30px;
-  }
-}
-
-
-/* -------------------------------------- */
-/* 6. Contact Section (Formulario) */
-/* -------------------------------------- */
-.contact-container {
-  max-width: 1236px;
-}
-.contact-header {
-  max-width: 728px;
-  margin-bottom: 40px;
-}
+/* -------------------- */
+/* Contact */
+/* -------------------- */
+.contact-container { max-width: 1236px; }
+.contact-header { max-width: 728px; margin-bottom: 40px; }
 .contact-title {
   font-family: var(--font-heading);
   font-size: 36px;
   font-weight: 500;
   margin-bottom: 16px;
 }
-.contact-subtitle {
-  font-size: 18px;
-  line-height: 1.5;
-}
+.contact-subtitle { font-size: 18px; line-height: 1.5; }
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px 28px;
 }
-.form-group {
-  position: relative;
-}
-.form-group-full {
-  grid-column: 1 / -1;
-}
-/* Ajuste de estilos de labels y placeholders */
-.form-group label {
-  /* Se oculta el label y se usa el placeholder para la funcionalidad */
-  display: none; 
-}
+.form-group { position: relative; }
+.form-group-full { grid-column: 1 / -1; }
+.form-group label { display: none; }
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -608,20 +455,16 @@ section {
   font-size: 16px;
   color: var(--color-text-dark);
 }
-/* Estilo del placeholder como si fuera el label flotante (ajustado para funcionar sin JS) */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: #597081;
   font-size: 16px;
 }
-
 .form-group textarea {
   padding-top: 14px;
   resize: vertical;
 }
-.form-submit-wrapper {
-  margin-top: 16px;
-}
+.form-submit-wrapper { margin-top: 16px; }
 .btn-submit {
   padding: 10px 37px;
   border: 1px solid #000000;
@@ -636,26 +479,22 @@ section {
 .btn-submit:hover {
   background-color: var(--color-text-dark);
   color: var(--color-primary-light);
-}
-
-@media (max-width: 768px) {
-  .contact-form {
-    grid-template-columns: 1fr;
   }
+@media (max-width: 768px) {
+  .contact-form { grid-template-columns: 1fr; }
+  .contact-title { font-size: 30px; }
+  .contact-subtitle { font-size: 16px; }
 }
 
-
-/* -------------------------------------- */
-/* 7. Location Section */
-/* -------------------------------------- */
+/* -------------------- */
+/* Location */
+/* -------------------- */
 .location-container {
   display: flex;
   align-items: center;
   gap: 100px;
 }
-.location-info {
-  flex-shrink: 0;
-}
+.location-info { flex-shrink: 0; }
 .location-title {
   font-family: var(--font-heading);
   font-size: 36px;
@@ -670,15 +509,10 @@ section {
   flex-grow: 1;
   text-align: right;
 }
-.location-map a:first-child {
-    display: block;
-    line-height: 0; /* Elimina el espacio debajo de la imagen */
-}
 .location-map img {
   max-width: 100%;
   height: auto;
-  display: inline-block; /* Cambiado a inline-block para que se centre en mobile si es necesario */
-  border-radius: 10px; /* Añadido un poco de radio */
+  border-radius: 10px;
 }
 .map-link {
   display: inline-block;
@@ -687,25 +521,20 @@ section {
   text-decoration: underline;
   color: var(--color-primary-dark);
 }
-
 @media (max-width: 1024px) {
   .location-container {
     flex-direction: column;
     gap: 40px;
     text-align: center;
   }
-  .section-title-bar {
-    margin: 0 auto 24px;
-  }
-  .location-map {
-    text-align: center;
-  }
+  .section-title-bar { margin: 0 auto 24px; }
+  .location-map { text-align: center; }
+  .location-map img { max-width: 90%; }
 }
 
-
-/* -------------------------------------- */
-/* 8. Footer */
-/* -------------------------------------- */
+/* -------------------- */
+/* Footer */
+/* -------------------- */
 .site-footer {
   background-color: var(--color-primary-dark);
   color: var(--color-primary-light);
@@ -724,9 +553,7 @@ section {
   margin-bottom: 16px;
   text-transform: uppercase;
 }
-.footer-column ul li {
-  margin-bottom: 16px;
-}
+.footer-column ul li { margin-bottom: 16px; }
 .footer-column, .footer-column a {
   font-family: 'Neue Montreal', sans-serif;
   font-size: 16px;
@@ -739,28 +566,22 @@ section {
   align-items: center;
   gap: 30px;
 }
-.footer-logo {
-  height: 78px;
-  width: auto;
-}
+.footer-logo { height: 78px; width: auto; }
 .social-icons {
   display: flex;
   gap: 28px;
   align-items: center;
 }
-.social-icons img {
-  height: 35px;
-  width: auto;
-}
+.social-icons img { height: 35px; width: auto; }
 .footer-newsletter p {
   color: #dadada;
   font-size: 18px;
   margin-bottom: 12px;
 }
 .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .newsletter-form input {
   width: 100%;
@@ -768,10 +589,10 @@ section {
   background-color: #d9d9d9;
   border: none;
   padding: 0 10px;
-  color: var(--color-text-dark);
+   color: var(--color-text-dark);
 }
 .newsletter-form input::placeholder {
-    color: #597081;
+  color: #597081;
 }
 .newsletter-form button {
   padding: 8px 20px;
@@ -785,9 +606,10 @@ section {
   font-weight: 500;
 }
 .newsletter-form button:hover {
-    background-color: #f1f0ea30;
+  background-color: #f1f0ea30;
 }
 
+/* Back to top */
 .back-to-top {
   position: absolute;
   bottom: 60px;
@@ -819,6 +641,7 @@ section {
   height: 16px;
 }
 
+/* Footer responsive adjustments */
 @media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -832,7 +655,7 @@ section {
   .footer-branding {
     grid-column: 1 / -1;
     order: -1;
-    margin-bottom: 20px; /* Espacio extra */
+    margin-bottom: 20px;
   }
   .back-to-top {
     bottom: 30px;
@@ -840,13 +663,23 @@ section {
   }
 }
 @media (max-width: 500px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-column {
+    align-items: stretch;
+  }
+  .footer-branding {
+    order: 0;
+  }
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+  }
 }
 
 /* -------------------- */
-/* Location Section - Map */
+/* Location Section - Map (iframe) */
 /* -------------------- */
 .location .map {
   width: 100%;
@@ -862,3 +695,287 @@ section {
   border: 0;
   display: block;
 }
+
+/* -------------------- */
+/* Extra global responsive tweaks (typography, spacing) */
+/* -------------------- */
+@media (max-width: 1200px) {
+  :root {
+    --fluid-gap-lg: 32px;
+  }
+  section { padding: 60px 0; }
+  .hero-section { min-height: 700px; }
+  .hero-title { font-size: 48px; }
+}
+
+@media (max-width: 1024px) {
+  /* Reduce paddings and font sizes for tablets */
+  section { padding: 50px 0; }
+  .hero-section { min-height: 640px; }
+  .hero-title { font-size: 44px; }
+  .banner-section { padding: 80px 0; }
+  .team-members-wrapper { padding: 32px; }
+  .team-members-subtitle { font-size: 18px; }
+  .testimonials-title { font-size: 30px; }
+  .contact-title { font-size: 32px; }
+  .location-title { font-size: 30px; }
+  .location-address { font-size: 20px; }
+}
+
+@media (max-width: 768px) {
+  /* Mobile-specific scale down */
+  section { padding: 40px 0; }
+  .hero-section { min-height: 560px; padding-top: 20px; padding-bottom: 20px; }
+  .hero-title { font-size: 34px; line-height: 1.15; text-align: center; }
+  .hero-subtitle { text-align: center; }
+  .hero-content { padding-top: 90px; }
+  .logo img { height: 46px; }
+  .nav-links { display: none; }
+  .main-nav { padding: 12px 0; }
+  .about-image img { border-radius: 18px; }
+  .about-title { font-size: 28px; }
+  .team-intro-title { font-size: 28px; }
+  .team-members-grid { gap: 28px; }
+  .member-card img { height: 240px; }
+  .testimonials-grid { gap: 26px; }
+  .testimonial-card { padding: 20px; }
+  .contact-form { gap: 16px; }
+  .contact-title { font-size: 28px; }
+  .location .map { height: 300px; }
+  .location-title { font-size: 28px; }
+  .footer-container { gap: 20px; padding: 30px 20px; }
+  .footer-logo { height: 64px; }
+  .social-icons img { height: 28px; }
+  .btn { padding: 12px 16px; font-size: 13px; }
+  .btn-submit { padding: 10px 28px; font-size: 14px; }
+}
+
+/* Small accessibility tweak: increase hit targets on touch */
+@media (hover: none) and (pointer: coarse) {
+  .nav-links a, .btn, .btn-submit, .newsletter-form button, .header-email, .header-phone {
+    padding: 14px 18px;
+  }
+}
+/* ============================= */
+/* ======= PALETA DE COLORES ======= */
+/* ============================= */
+
+:root {
+  --color-primary-dark: #112c50;
+  --color-primary-light: #f1f0ea;
+  --color-primary-accent: #e3be86;
+  --color-secondary-accent: #c55a26;
+  --color-text-light: #f5f5f5;
+  --color-text-dark: #000000;
+  --color-background-light: #f1f0ea;
+  --color-background-medium: #b9cade;
+  --font-heading: 'Reckless Neue', serif;
+  --font-body: 'Neue Montreal', 'Inter', sans-serif;
+}
+
+/* ============================= */
+/* ======= HEADER BASE ======= */
+/* ============================= */
+.hero-section {
+  position: relative;
+  min-height: 800px;
+  padding: 0;
+  background-image: linear-gradient(rgba(17, 18, 20, 0.7), rgba(17, 18, 20, 0.7)), url('assets/img/header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-primary-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* Barra superior */
+.header-top-bar {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.header-top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-switcher a {
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+.lang-switcher a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.header-phone,
+.header-email {
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+/* ============================= */
+/* ======= MENÚ PRINCIPAL ======= */
+/* ============================= */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px 0 20px;
+  position: relative;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary-accent);
+}
+
+/* ============================= */
+/* ======= HAMBURGUESA ======= */
+/* ============================= */
+
+#menu-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-20px, 25px);
+  z-index: 2001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-text-light);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación de cierre */
+#menu-checkbox:checked + .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-checkbox:checked + .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+#menu-checkbox:checked + .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ============================= */
+/* ======= MODO MÓVIL ======= */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary-dark);
+    width: 100%;
+    height: 100vh;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 1500;
+  }
+
+  /* Mostrar menú cuando se activa */
+  #menu-checkbox:checked ~ .nav-links {
+    left: 0;
+  }
+
+  .nav-links a {
+    color: var(--color-text-light);
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-primary-accent);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+}
+
+/* ============================= */
+/* ======= MODO ESCRITORIO ======= */
+/* ============================= */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    background: none;
+    height: auto;
+  }
+}
+
+/* End of CSS */

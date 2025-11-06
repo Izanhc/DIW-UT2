@@ -1,0 +1,151 @@
+:root {
+  --color-fondo: gainsboro;
+  --color-texto: #333;
+  --fuente: 'Fuente general', sans-serif;
+  --fuente2: Sans-serif;
+  --radius: 8px;
+  --gap: 12px;
+  --trans: 0.3s ease;
+  --hover-scale: 1.03;
+  --row-h: 200px;
+}
+
+@font-face {
+  font-family: 'Fuente general';
+  src: url(fonts/fontTitulo3.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fondo);
+  font-family: var(--fuente2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+/* Estilos generales */
+.item {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter var(--trans), transform var(--trans);
+}
+
+.item img:hover {
+  filter: grayscale(100%);
+  transform: scale(var(--hover-scale));
+  cursor: pointer;
+}
+
+/* Bloques de texto */
+.texto {
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.texto p {
+  margin: 0 0 8px;
+  color: var(--color-texto);
+  font-size: 0.9rem;
+}
+.texto span {
+  font-weight: bold;
+}
+
+/* Bloque "Buena Suerte" */
+.mensaje {
+  background: var(--color-fondo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--fuente);
+  font-size: 2.5rem;
+  color: var(--color-texto);
+}
+
+
+/* 📱 Móvil */
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* 💻 Tablet */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+  }
+
+  /* Columna 1 */
+  .pino { grid-column: 1 / 2; grid-row: 1 / 3; }          /* Pino (2 filas) */
+  .golden-gate { grid-column: 1 / 2; grid-row: 3 / 5; }   /* Golden Gate (2 filas) */
+
+  /* Columna 2 */
+  .girasoles { grid-column: 2 / 3; grid-row: 1 / 2; }     /* Girasoles */
+  .costa-rocosa { grid-column: 2 / 3; grid-row: 2 / 3; }  /* Costa rocosa */
+  .acantilado { grid-column: 2 / 3; grid-row: 3 / 4; }    /* Acantilado */
+  .pajaros { grid-column: 2 / 3; grid-row: 4 / 5; }       /* Pájaros */
+  .hombre-paisaje { grid-column: 1 / 3; grid-row: 6 / 7; }/* Hombre en el paisaje */
+  .mujer-sombrero { grid-column: 3 / 4; grid-row: 6 / 7; }/* Mujer con sombrero */
+
+  /* Columna 3 */
+  .texto1 { grid-column: 3 / 4; grid-row: 1 / 2; }        /* Texto 1 */
+  .texto2 { grid-column: 3 / 4; grid-row: 2 / 3; }        /* Texto 2 */
+  .globo { grid-column: 3 / 4; grid-row: 3 / 5; }         /* Globo (2 filas) */
+  .buena-suerte { grid-column: 1 / 3; grid-row: 5 / 6; }  /* Buena Suerte (2 filas) */
+  .texto3 { grid-column: 3 / 4; grid-row: 5 / 6; }        /* Texto 3 */
+}
+
+
+/* 🖥️ Escritorio grande */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: var(--row-h);
+  }
+
+  /* Posiciones exactas según la imagen */
+
+  /* Columna 1 */
+  .bosque { grid-column: 1 / 2; grid-row: 1 / 3; }
+
+  /* Columna 2 */
+  .girasoles { grid-column: 2 / 3; grid-row: 1 / 2; }
+  .texto1 { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+  /* Columna 3 */
+  .texto2 { grid-column: 3 / 4; grid-row: 1 / 2; }
+  .acantilado { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+  /* Columna 4 */
+  .puente { grid-column: 4 / 5; grid-row: 1 / 3; }
+
+  /* Columna 5 */
+  .mar { grid-column: 5 / 6; grid-row: 1 / 2; }
+  .pajaros { grid-column: 5 / 6; grid-row: 2 / 3; }
+
+  /* Fila central */
+  .globo { grid-column: 3 / 1; grid-row: 5 / 3; }
+  .mensaje { grid-column: 3 / 5; grid-row: 3 / 3;  } 
+  .texto3 { grid-column: 5 / 6; grid-row: 3 / 4; }
+
+  /* Fila inferior */
+  .persona { grid-column: 3 / 5; grid-row: 4 / 5; }
+  .sombrero { grid-column: 5 / 6; grid-row: 4 / 5; }
+}
