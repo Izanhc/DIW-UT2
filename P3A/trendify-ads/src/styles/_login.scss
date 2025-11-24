@@ -16,7 +16,7 @@
     justify-content: center;
     
     img {
-      width: 150px; // Larger for login page
+      width: 150px;
       height: auto;
     }
   }
@@ -26,18 +26,18 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
-    max-width: 450px; // Slightly wider
+    max-width: 450px;
     
     input {
       width: 100%;
       padding: 1.2rem 2rem;
-      border-radius: 50px; // Pill shape
+      border-radius: 50px;
       border: none;
-      background-color: #e6dada; // Pinkish/Beige from image
+      background-color: #e6dada;
       font-size: 1.2rem;
       color: $black;
       outline: none;
-      font-family: $texto-general; // Abel
+      font-family: $texto-general;
       
       &::placeholder {
         color: #333;
@@ -50,12 +50,12 @@
     }
     
     button {
-      width: 40%; // Smaller width button
+      width: 40%;
       align-self: center;
       padding: 1rem;
       border-radius: 50px;
       border: none;
-      background-color: $color; // Yellow
+      background-color: $color;
       font-weight: bold;
       font-size: 1.1rem;
       cursor: pointer;

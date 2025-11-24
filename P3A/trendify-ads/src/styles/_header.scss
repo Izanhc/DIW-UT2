@@ -6,10 +6,10 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: $black;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); // Subtle separator
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   nav {
-    flex: 1; // Takes up left space
+    flex: 1;
     
     ul {
       display: flex;
@@ -34,22 +34,22 @@ header {
   }
 
   .logo {
-    flex: 1; // Takes up center space
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     
     img {
-      height: 50px; // Adjusted for logo with text
+      height: 50px;
       width: auto;
       max-width: 200px;
     }
   }
 
   .actions {
-    flex: 1; // Takes up right space
+    flex: 1;
     display: flex;
-    justify-content: flex-end; // Align to right
+    justify-content: flex-end;
     gap: 1.5rem;
     
     a {
