@@ -1,0 +1,83 @@
+@use "globals" as *;
+
+header {
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); // Subtle separator
+
+  nav {
+    flex: 1; // Takes up left space
+    
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li a {
+        color: $white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-family: $texto-general;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+        
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .logo {
+    flex: 1; // Takes up center space
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      height: 50px; // Adjusted for logo with text
+      width: auto;
+      max-width: 200px;
+    }
+  }
+
+  .actions {
+    flex: 1; // Takes up right space
+    display: flex;
+    justify-content: flex-end; // Align to right
+    gap: 1.5rem;
+    
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include respond-to("small") {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    
+    nav, .logo, .actions {
+      flex: auto;
+      width: 100%;
+      justify-content: center;
+    }
+    
+    nav ul {
+      justify-content: center;
+    }
+  }
+}

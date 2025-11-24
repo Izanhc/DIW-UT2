@@ -1,0 +1,38 @@
+@use "globals" as *;
+
+html {
+  box-sizing: border-box;
+  font-family: $texto-general;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $black;
+  color: $white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $base-spacing;
+  
+  @include respond-to("small") {
+    padding: 0 0.5rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0.5rem;
+}

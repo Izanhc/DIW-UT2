@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrendifyAds - JetClean Pro</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Abel&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <img src="./assets/icon-dust.png" alt="" width="500" height="500" />
+      </div>
+      <div class="actions">
+        <a href="#"><img src="./assets/logo-white.png" alt="" width="25" /></a>
+        <!-- Search -->
+        <a href="login.html"
+          ><img src="./assets/icon-wind.png" alt="" width="25"
+        /></a>
+        <!-- User -->
+        <a href="#"><img src="./assets/icon-motor.png" alt="" width="25" /></a>
+        <!-- Cart -->
+      </div>
+    </header>
+
+    <main>
+      <section class="product-section">
+        <div class="product-container">
+          <div class="product-image">
+            <!-- Text overlay removed as it is part of the product image -->
+            <img
+              src="./assets/product-main.jpg"
+              alt="JetClean Pro"
+              id="product-img"
+            />
+          </div>
+
+          <div class="product-details">
+            <h1>JetClean Pro</h1>
+            <div class="price">
+              <span class="original">€65.99</span>
+              <span class="current">€37.99</span>
+              <span class="offer-tag">Oferta</span>
+            </div>
+
+            <div class="color-label">Color:</div>
+            <div class="options">
+              <button class="option-btn selected">
+                3 Gear Adjustable
+                <span>(350853)</span>
+              </button>
+            </div>
+
+            <div class="quantity">
+              <label>Cantidad</label>
+              <div class="qty-selector">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+
+            <button class="add-to-cart">Agregar al carrito</button>
+            <button class="paypal-btn">
+              Pagar con <span class="paypal-text">Pay<span>Pal</span></span>
+            </button>
+
+            <a href="#" class="details-link">Ver todos los detalles --></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025, TrendifyAds Tecnología de Shopify - Política de privacidad -
+      Preferencia de cookies
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

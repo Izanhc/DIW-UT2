@@ -1,0 +1,30 @@
+@use "sass:map";
+
+$breakpoints: (
+  "small": "screen and (max-width: 599px)",
+  "medium": "screen and (min-width: 600px) and (max-width: 1199px)",
+  "large": "screen and (min-width: 1200px)"
+);
+
+@mixin respond-to($breakpoint) {
+  $query: map.get($breakpoints, $breakpoint);
+
+  @if $query {
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`.';
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
